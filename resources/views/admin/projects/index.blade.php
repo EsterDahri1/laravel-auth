@@ -95,7 +95,7 @@
                     @endforelse
                 </tbody>
             </table>
-            <div class="pt-4"> {{ $projects->links('pagination::bootstrap-5') }} </div>
+            {!! $projects->withQueryString()->links('pagination::bootstrap-5') !!}
         </div>
     </div>
 @endsection
