@@ -40,9 +40,9 @@ class ProjectController extends Controller
         $val_data['slug'] = Str::slug($request->title, '-');
         //dd($val_data);
 
-        if ($request->has('thumb')) {
-            $file_path = Storage::put('projects_images', $request->thumb);
-            $val_data['thumb'] = $file_path;
+        if ($request->has('cover_image')) {
+            $file_path = Storage::put('projects_images', $request->cover_image);
+            $val_data['cover_image'] = $file_path;
         }
 
         Project::create($val_data);
@@ -64,7 +64,7 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        //
+        return view('admin.projects.edit', compact('project'));
     }
 
     /**
@@ -72,7 +72,20 @@ class ProjectController extends Controller
      */
     public function update(UpdateProjectRequest $request, Project $project)
     {
-        //
+        $val_data = $request->validated();
+
+        if ($request->has('cover_image') && $project->cover_image) {
+
+            Storage::delete($project->cover_image);
+
+            $newImageFile = $request->cover_image;
+            $file_path = Storage::put('projects_images', $newImageFile);
+            $val_data['cover_image'] = $file_path;
+        }
+
+        $project->update($val_data);
+
+        return to_route('admin.projects.index')->with('message', 'Welldone! project updated successfully');
     }
 
     /**
