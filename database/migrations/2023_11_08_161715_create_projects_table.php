@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
+            $table->string('cover_image');
+            $table->string('title');
+            $table->string('slug'); //takes the title and puts it in the URL
+            $table->text('content')->nullable();
             $table->timestamps();
         });
     }
