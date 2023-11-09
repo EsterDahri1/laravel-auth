@@ -11,3 +11,6 @@
         {{ $project->id }}
     </div>
 @endsection
+
+
+{{-- make it better --}}
