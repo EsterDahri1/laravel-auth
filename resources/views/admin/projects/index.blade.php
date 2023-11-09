@@ -27,7 +27,7 @@
                         <th scope="col">Title</th>
                         <th scope="col">Image</th>
                         <th scope="col">Description</th>
-                        <th>Options</th>
+                        <th scope="col">Options</th>
                     </tr>
                 </thead>
                 <tbody class="table-group-divider">
@@ -44,7 +44,7 @@
 
                             <td> {{ $project->description }} </td>
 
-                            <td class="d-flex gap-2">
+                            <td scope="row" class="py-5 d-flex gap-2 h-100">
                                 <a href=" {{ route('admin.projects.show', $project->slug) }} "
                                     class="btn btn-outline-primary">View</a>
                                 <a href=" {{ route('admin.projects.edit', $project->slug) }} "
