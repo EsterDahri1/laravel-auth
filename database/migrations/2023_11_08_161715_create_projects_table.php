@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('cover_image');
             $table->string('title');
             $table->string('slug'); //takes the title and puts it in the URL
-            $table->text('content')->nullable();
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }

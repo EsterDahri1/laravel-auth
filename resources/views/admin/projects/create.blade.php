@@ -52,10 +52,10 @@
                 </div>
 
                 <div class="mb-5">
-                    <label for="content" class="form-label">Content</label>
-                    <textarea class="form-control @error('content') is-invalid @enderror" name="content" id="content" cols="30"
-                        rows="5" placeholder="Type a content">{{ old('content') }}</textarea>
-                    @error('content')
+                    <label for="description" class="form-label">Description</label>
+                    <textarea class="form-control @error('description') is-invalid @enderror" name="description" id="description"
+                        cols="30" rows="5" placeholder="Type a description">{{ old('description') }}</textarea>
+                    @error('description')
                         <div class="text-danger"> {{ $message }} </div>
                     @enderror
                 </div>
