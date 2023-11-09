@@ -15,8 +15,6 @@
 
         <div class="d-flex justify-content-between my-4">
             <a class="btn btn-primary" href="{{ route('admin.projects.create') }}">Add New project</a>
-            <a class="btn btn-danger" href="{{ route('admin.trash') }}">Trash</a>
-
         </div>
 
         <div class="pt-4"> {{ $projects->links('pagination::bootstrap-5') }} </div>
