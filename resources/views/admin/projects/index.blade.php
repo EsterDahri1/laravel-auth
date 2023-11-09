@@ -17,8 +17,6 @@
             <a class="btn btn-primary" href="{{ route('admin.projects.create') }}">Add New project</a>
         </div>
 
-        <div class="pt-4"> {{ $projects->links('pagination::bootstrap-5') }} </div>
-
         <div class="table-responsive">
             <table class="table table-primary table-hover table-striped table-bordered">
                 <thead>
