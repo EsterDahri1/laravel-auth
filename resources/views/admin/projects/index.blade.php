@@ -96,7 +96,7 @@
                 </tbody>
             </table>
 
-            {!! $projects->withQueryString()->links('pagination::bootstrap-5') !!}
+            {{ $projects->links('pagination::bootstrap-5') }}
         </div>
     </div>
 @endsection
