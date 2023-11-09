@@ -26,7 +26,6 @@ Route::middleware('auth', 'verified')->prefix('admin')->name('admin.')->group(fu
     Route::resource('projects', ProjectController::class)->parameters([
         'projects' => 'project:slug'
     ]);
-    Route::get('/admin/comics/trash', [ProjectController::class, 'trash_projects'])->name('trash');
 });
 
 /*Pofile*/
