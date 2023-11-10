@@ -44,11 +44,11 @@
 
                             <td> {{ $project->description }} </td>
 
-                            <td> {{ $project->github }} </td>
+                            <td> <a href="{{ $project->github }} ">{{ $project->github }} </a></td>
 
-                            <td> {{ $project->link }} </td>
+                            <td> <a href="{{ $project->link }}">{{ $project->link }}</a> </td>
 
-                            <td scope="row" class="py-5 d-flex gap-2 h-100">
+                            <td height="100%" class="d-flex gap-2">
                                 <a href=" {{ route('admin.projects.show', $project->slug) }} "
                                     class="btn btn-outline-primary">View</a>
                                 <a href=" {{ route('admin.projects.edit', $project->slug) }} "
