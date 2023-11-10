@@ -25,6 +25,8 @@
                         <th scope="col">Title</th>
                         <th scope="col">Image</th>
                         <th scope="col">Description</th>
+                        <th scope="col">Github</th>
+                        <th scope="col">Link</th>
                         <th scope="col">Options</th>
                     </tr>
                 </thead>
