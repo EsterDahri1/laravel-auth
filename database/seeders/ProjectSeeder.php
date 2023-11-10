@@ -24,6 +24,8 @@ class ProjectSeeder extends Seeder
             // $project->cover_image = 'placeholders/' . $faker->image('public/storage/placeholders', category: 'projects', fullPath: false);
             $project->slug = Str::slug($project->title, '-');
             $project->description = $faker->realText();
+            $project->github = $faker->url();
+            $project->link = $faker->url();
             $project->save();
         }
     }
