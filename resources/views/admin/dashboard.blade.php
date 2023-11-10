@@ -36,9 +36,8 @@
             <div class="col">
                 <div class="card h-100">
                     <div class="card-body">
-                        <h4 class="card-title">About me</h4>
-                        <p class="card-text">The story of a 23 yo Full Stack Web Developer (Fake it 'till you make it, as
-                            the wiser say 😅)</p>
+                        <h4 class="card-title">To fill</h4>
+                        <p class="card-text"></p>
                     </div>
                 </div>
             </div>
