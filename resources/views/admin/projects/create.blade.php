@@ -51,6 +51,24 @@
                     @enderror
                 </div>
 
+                <div class="mb-5">
+                    <label for="github" class="form-label">Github</label>
+                    <textarea class="form-control @error('github') is-invalid @enderror" name="github" id="github" cols="30"
+                        rows="5" placeholder="Insert a github link">{{ old('github') }}</textarea>
+                    @error('github')
+                        <div class="text-danger"> {{ $message }} </div>
+                    @enderror
+                </div>
+
+                <div class="mb-5">
+                    <label for="link" class="form-label">Link</label>
+                    <textarea class="form-control @error('link') is-invalid @enderror" name="link" id="link" cols="30"
+                        rows="5" placeholder="Insert a link">{{ old('link') }}</textarea>
+                    @error('link')
+                        <div class="text-danger"> {{ $message }} </div>
+                    @enderror
+                </div>
+
                 <button type="submit" class="btn btn-primary">Add</button>
                 <a class="text-decoration-none btn btn-primary" href="{{ route('admin.projects.index') }}">Go to project
                     table</a>
