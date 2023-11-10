@@ -1,16 +1,6 @@
 @extends('layouts.admin')
 
 @section('content')
-    {{-- <div>
-        Title:
-        {{ $project->title }}
-    </div>
-
-    <div>
-        Id:
-        {{ $project->id }}
-    </div> --}}
-
     <div class="container">
         <h1>Selected project</h1>
         <div class="my-2 row row-cols-2 g-3">
