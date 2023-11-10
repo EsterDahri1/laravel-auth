@@ -51,10 +51,11 @@
                     @enderror
                 </div>
 
-                <div class="mb-5">
+                {{-- <div class="mb-5">
                     <label for="github" class="form-label">Github</label>
-                    <textarea class="form-control @error('github') is-invalid @enderror" name="github" id="github" cols="30"
-                        rows="5" placeholder="Insert a github link">{{ old('github') }}</textarea>
+                    <input type="text" name="github" id="github"
+                        class="form-control @error('github') is-invalid @enderror" placeholder="" aria-describedby="helpId"
+                        value="{{ old('github') }}">
                     @error('github')
                         <div class="text-danger"> {{ $message }} </div>
                     @enderror
@@ -62,11 +63,38 @@
 
                 <div class="mb-5">
                     <label for="link" class="form-label">Link</label>
-                    <textarea class="form-control @error('link') is-invalid @enderror" name="link" id="link" cols="30"
-                        rows="5" placeholder="Insert a link">{{ old('link') }}</textarea>
+                    <input type="text" name="link" id="link"
+                        class="form-control @error('link') is-invalid @enderror" placeholder="" aria-describedby="helpId"
+                        value="{{ old('link') }}">
                     @error('link')
                         <div class="text-danger"> {{ $message }} </div>
                     @enderror
+                </div> --}}
+
+                <div class="mb-3">
+                    <label for="github" class="form-label">Github link</label>
+                    <div class="input-group">
+                        <span class="input-group-text" id="github">https://</span>
+                        <input type="text" name="github" class="form-control" id="github" aria-describedby=""
+                            basic-addon4" value="{{ old('github') }}">
+                        @error('github')
+                            <div class="text-danger"> {{ $message }} </div>
+                        @enderror
+                    </div>
+                    <div class="form-text" id="basic-addon4">Insert your github link.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="link" class="form-label">Link</label>
+                    <div class="input-group">
+                        <span class="input-group-text" id="link">https://</span>
+                        <input type="text" name="link" class="form-control" id="link" aria-describedby=""
+                            basic-addon4" value="{{ old('link') }}">
+                        @error('link')
+                            <div class="text-danger"> {{ $message }} </div>
+                        @enderror
+                    </div>
+                    <div class="form-text" id="basic-addon4">Insert your github link.</div>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Add</button>
