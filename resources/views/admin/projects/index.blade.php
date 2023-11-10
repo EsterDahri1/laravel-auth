@@ -42,6 +42,10 @@
 
                             <td> {{ $project->description }} </td>
 
+                            <td> {{ $project->github }} </td>
+
+                            <td> {{ $project->link }} </td>
+
                             <td scope="row" class="py-5 d-flex gap-2 h-100">
                                 <a href=" {{ route('admin.projects.show', $project->slug) }} "
                                     class="btn btn-outline-primary">View</a>
